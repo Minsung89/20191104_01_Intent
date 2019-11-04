@@ -2,6 +2,7 @@ package com.tjoeum.a20191104_01_intent
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -29,6 +30,20 @@ class MainActivity : AppCompatActivity() {
             var intent = Intent(this, EditPhoneActivity::class.java)
 
             startActivityForResult(intent, REQ_CODE_FOR_PHONE)
+        }
+
+        phoneNumDialBtn.setOnClickListener {
+            var uri = Uri.parse("tel:01053194080") //띄어쓰기 하면 안됨.
+
+            var intent = Intent(Intent.ACTION_DIAL, uri)
+            startActivity(intent)
+        }
+
+        phoneCallBtn.setOnClickListener {
+//            var uri = Uri.parse("tel:01053194080") //띄어쓰기 하면 안됨.
+//
+//            var intent = Intent(Intent.ACTION_CALL, uri)
+//            startActivity(intent)
         }
 
     }
