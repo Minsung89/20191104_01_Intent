@@ -46,6 +46,16 @@ class MainActivity : AppCompatActivity() {
 //            startActivity(intent)
         }
 
+        snsBtn.setOnClickListener {
+
+            var uri = Uri.parse("smsto:01053194080")
+
+            var intent = Intent(Intent.ACTION_SENDTO,uri)
+            intent.putExtra("sms_body", "내가 만들었다 이시끼야")
+            startActivity(intent)
+
+        }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
