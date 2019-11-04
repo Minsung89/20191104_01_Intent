@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
 
             var intent = Intent(this,EditUserInfoActivity::class.java)
-            startActivity(intent)
+            startActivityForResult(intent, 1000)
         }
     }
 }
