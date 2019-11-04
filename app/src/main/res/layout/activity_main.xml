@@ -27,4 +27,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="이름 입력하러 가기"/>
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/phoneNumTxt"
+            android:text="폰번 입력 필요"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/phoneNumInputBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="폰번 입력하러 가기"/>
 </LinearLayout>

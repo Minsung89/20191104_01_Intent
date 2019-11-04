@@ -4,25 +4,24 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_edit_user_info.*
+import kotlinx.android.synthetic.main.activity_edit_phone.*
 
-class EditUserInfoActivity : AppCompatActivity() {
+class EditPhoneActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_edit_user_info)
+        setContentView(R.layout.activity_edit_phone)
 
 
         okBtn.setOnClickListener {
+
             var intent = Intent()
+            intent.putExtra("inputPhoneNum",phoneNumEdt.text.toString())
 
-            intent.putExtra("inputName",nameEdt.text.toString())
-
-            setResult(Activity.RESULT_OK,intent)
+            setResult( Activity.RESULT_OK, intent)
 
             finish()
         }
-
         cancelBtn.setOnClickListener {
             finish()
         }
